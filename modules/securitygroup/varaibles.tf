@@ -1,0 +1,3 @@
+variable "sgtag" {
+    type = string
+}
