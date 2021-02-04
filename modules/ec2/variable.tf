@@ -4,14 +4,20 @@ variable "instance_type" {
 }
 
 variable "ec2_count" {
-  type = number
-  default = 1
+  type    = number
+  default = 2
 }
 
 variable "sg_id" {}
 
 
 variable "keyname" {}
+
+variable "subnets" {}
+
+variable "instance_name" {}
+
+
 
 
 

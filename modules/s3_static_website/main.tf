@@ -9,19 +9,19 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 resource "aws_s3_bucket_object" "index" {
-  bucket = aws_s3_bucket.bucket.id
-  key    = "index.html"
-  source = "html/index.html"
-  acl    = "public-read"
+  bucket       = aws_s3_bucket.bucket.id
+  key          = "index.html"
+  source       = "html/index.html"
+  acl          = "public-read"
   content_type = "text/html"
 
 }
 
 resource "aws_s3_bucket_object" "error" {
-  bucket = aws_s3_bucket.bucket.id
-  key    = "error.html"
-  source = "html/error.html"
-  acl    = "public-read"
+  bucket       = aws_s3_bucket.bucket.id
+  key          = "error.html"
+  source       = "html/error.html"
+  acl          = "public-read"
   content_type = "text/html"
 
 }

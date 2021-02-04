@@ -1,4 +1,4 @@
 variable "iamusers" {
-    type= list
-    default = [ "pretty", "prazol", "saroj"]
+  type    = list(any)
+  default = ["pretty", "prazol", "saroj"]
 }    

@@ -1,4 +1,4 @@
-variable "sg"{}
+variable "sg" {}
 
 #variable "instance1_id" {}
 

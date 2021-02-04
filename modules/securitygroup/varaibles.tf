@@ -1,3 +1,5 @@
 variable "sgtag" {
-    type = string
+  type = string
 }
+
+variable "vpc" {}

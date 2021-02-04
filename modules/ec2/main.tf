@@ -24,8 +24,9 @@ resource "aws_instance" "mywebserver" {
   count                  = var.ec2_count
   instance_type          = var.instance_type
   key_name               = var.keyname
-  vpc_security_group_ids = var.sg_id 
- 
+  vpc_security_group_ids = var.sg_id
+  subnet_id              = element(var.subnets, count.index)
+
   user_data = <<-EOF
                 #! /bin/bash
                 yum update -y
@@ -35,7 +36,7 @@ resource "aws_instance" "mywebserver" {
                 echo "The hostname is: `hostname`." > /var/www/html/index.html
                 EOF
   tags = {
-    Name = "instance ${count.index + 1}"
+    Name = "${var.instance_name} ${count.index + 1}"
   }
 }
 
