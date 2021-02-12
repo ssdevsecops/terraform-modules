@@ -31,6 +31,7 @@ pipeline {
                  sh 'cd dev;terraform apply -auto-approve=true'
             }
          }
-    }
-}
+        } // end apply stage
+    } // end all stages
+} 
 
