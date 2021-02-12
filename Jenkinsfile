@@ -32,6 +32,6 @@ pipeline {
             }
          }
         } // end apply stage
-    } // end all stages
+    } // end all stages 
 } 
 
