@@ -1,2 +1,2 @@
-@Library(devops-shared-lib) _ 
+@Library('devops-shared-lib') _ 
 terra()
